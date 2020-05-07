@@ -1,0 +1,44 @@
+{
+  "name": "jest-typescrip-tests",
+  "version": "1.0.0",
+  "description": "Jest TypeScript tests",
+  "scripts": {
+    "dev": "npm run test -- --watchAll",
+    "test": "jest --preset=ts-jest --testEnvironment=node --reporters=default --reporters=jest-junit --collect-coverage",
+    "test-js-with-ts": "jest --preset=ts-jest/presets/js-with-ts --testEnvironment=node --reporters=default --reporters=jest-junit --collect-coverage",
+    "test-js-with-babel": "jest --preset=ts-jest/presets/js-with-babel --testEnvironment=node --reporters=default --reporters=jest-junit --collect-coverage"
+  },
+  "keywords": [
+    "jest"
+  ],
+  "author": "daggerok",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-typescript": "7.9.0",
+    "@jest/core": "26.0.1",
+    "@jest/globals": "26.0.1",
+    "@jest/reporters": "26.0.1",
+    "@jest/types": "26.0.1",
+    "@types/jest": "25.2.1",
+    "@types/node": "13.13.5",
+    "core-js": "3.6.5",
+    "jest": "26.0.1",
+    "jest-junit": "10.0.0",
+    "ts-jest": "25.5.0",
+    "typescript": "3.8.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-typescript"
+    ]
+  }
+}

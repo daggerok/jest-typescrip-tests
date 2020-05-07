@@ -1,0 +1,17 @@
+notifications:
+  email: false
+git:
+  quiet: true
+  depth: false
+language: node_js
+node_js: lts/*
+install: true
+script:
+- npm i
+- npm t
+- npm run test-js-with-ts
+- npm run test-js-with-babel
+cache:
+  npm: true
+  directories:
+  - ~/.n*
